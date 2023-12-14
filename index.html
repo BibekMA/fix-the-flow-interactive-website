@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <title>BUURT</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -22,14 +27,7 @@
         <div class="bar"></div>
       </div>
     </nav>
-
-    <!--
-        Met qeuryselector kun je classes uit je css halen. 
-        Dit gebruik je dus als je bepaalde voor bepaalde classes een interactie wilt maken 
-        Dit is hoe je de code opschrijft: const footer = document.qeurySelector(".footer"); 
-        Dus eerst Const, vervolgens hoe je het in je JS wilt noemen, daarna de qeuryselector, en in de "" schrijf je de .class op van je CSS
-    
-    -->
+    <!-- ---------------- hamburger menu  ------------------ -->
     <script>
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
@@ -39,28 +37,12 @@
         navMenu.classList.toggle("active");
       });
     </script>
-
-    <!--
-      Met addEventListeners kun je bepaalde events toevoegen. Ik heb als event ("click") erin staan 
-      Dit houdt in dat er een interactie plaats vindt op het moment dat je iets klikt. 
-      Andere voorbeelden van Mouse events zijn: contextmenu(rechtermuisknop), mouseover/mouseout(als je met je muis erover heen gaat/eraf)
-      en mouse move, zo heb je nog veel meer. 
-    
-     Wat ik heb gedaan is, als je hamburger.classList.toggle("active") komt er een stukje CSS, zodra je dus op de hamburger menu klikt komt er
-     een CSS animatie dat de hamburger menu verandert naar een kruis.
-
-     bij navMenu.classList.toggle("active"), komt er ook een stukje CSS met animatie te voorschijn, hierbij zie je de navMenu, in een dropdown achtige idee
-    -->
-
-    <!-- Bovenste gedeelte gaat over de leertaak van sprint 5 -->
-
+       <!-- ---------------- einde hamburger menu  ------------------ -->
+   <!-- ---------------- Main content ------------------ -->
     <main>
       <section class="grid-container">
         <div class="image-container">
-          <img
-            src="fotos/Screenshot 2023-11-27 at 21.21.17.png"
-            alt="Mobile Image"
-          />
+          <img />
         </div>
         <div class="image-containerGroot">
           <img src="fotos/westmapsgroot.png" alt="Desktop image" />
@@ -83,7 +65,30 @@
         </div>
       </section>
     </main>
+      <!-- ---------------- Einde Main content ------------------ -->
 
+    <!-- ---------------- Search bar ------------------ -->
+    <section class="search-section">
+      <div class="container">
+        <div class="icon">
+          <i class="search fa fa-search"></i>
+          <div class="input">
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let icon = document.querySelector(".icon");
+        let container = document.querySelector(".container");
+
+        icon.onclick = function () {
+          container.classList.toggle("active");
+        };
+      </script>
+    </section>
+    <!-- ---------------- Search bar ------------------ -->
+
+        <!-- ---------------- Footer ------------------ -->
     <footer>
       <div class="footer-col">
         <h4>Over ons</h4>
@@ -136,6 +141,7 @@
                 d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
               /></svg
           ></a>
+               <!-- ---------------- Footer ------------------ -->
         </div>
       </div>
     </footer>
