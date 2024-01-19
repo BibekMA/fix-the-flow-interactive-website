@@ -1,8 +1,4 @@
 
-
-
-
-
 function setActive(section) {
     var offered = document.querySelector('.offered');
     var wanted = document.querySelector('.wanted');
